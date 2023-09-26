@@ -15,9 +15,18 @@ const Navbar = (props: Props) => {
       <FlexBetween gap="0.75rem">
       <PixIcon sx={{ fontSize: "28px" }} />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Link
+            to="/"
+            onClick={() => setSelected("dashboard")}
+            style={{
+              color: selected === "dashboard" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
         <Typography variant="h4" fontSize="16px">
           Finatica
         </Typography>
+        </Link>
         <Typography variant="h6" fontSize="12px">
           Product by Amey Shinde.
         </Typography>
